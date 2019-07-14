@@ -103,7 +103,7 @@
           <entry key="java" value="10990" />
           <entry key="js" value="7" />
           <entry key="jsp" value="3205" />
-          <entry key="readme" value="1195" />
+          <entry key="readme" value="1198" />
           <entry key="scala" value="6643" />
           <entry key="txt" value="726" />
           <entry key="xml" value="3" />
@@ -114,7 +114,7 @@
           <entry key="JAVA" value="10990" />
           <entry key="JSP" value="3205" />
           <entry key="JavaScript" value="7" />
-          <entry key="PLAIN_TEXT" value="1921" />
+          <entry key="PLAIN_TEXT" value="1924" />
           <entry key="Scala" value="6643" />
           <entry key="XML" value="3" />
         </counts>
@@ -225,8 +225,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+            <state relative-caret-position="349">
+              <caret line="26" column="163" selection-start-line="26" selection-start-column="163" selection-end-line="26" selection-end-column="163" />
             </state>
           </provider>
         </entry>
@@ -724,14 +724,7 @@
       <workItem from="1563033991304" duration="1370000" />
       <workItem from="1563106538573" duration="2436000" />
       <workItem from="1563128553510" duration="1210000" />
-      <workItem from="1563130836791" duration="236000" />
-    </task>
-    <task id="LOCAL-00016" summary="Merge branch 'master' of https://github.com/SaidouneRouaya/logLinc2&#10;&#10;# Conflicts:&#10;#&#9;src/java/Controller/Controller.java">
-      <created>1556641895061</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1556641895061</updated>
+      <workItem from="1563130836791" duration="1142000" />
     </task>
     <task id="LOCAL-00017" summary="Merge branch 'master' of https://github.com/SaidouneRouaya/logLinc2&#10;&#10;# Conflicts:&#10;#&#9;src/java/Controller/Controller.java">
       <created>1556744322357</created>
@@ -1069,11 +1062,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563129418917</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Merge branch 'master' of https://github.com/SaidouneRouaya/logLinc2&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/java/Services/MDPatternDetection/Alleviation/MDGraphsAlleviation.java&#10;#&#9;src/java/Services/MDPatternDetection/ConsolidationClasses/ConsolidationParallel.scala&#10;#&#9;src/java/Services/MDfromLogQueries/Declarations/Declarations.java&#10;#&#9;src/java/Services/Scenarios/Scenario_Analytic.scala&#10;#&#9;src/java/Services/Scenarios/Scenario_Enrichment.scala&#10;#&#9;src/java/Services/Scenarios/Scenario_LogOnly.scala&#10;#&#9;src/java/Services/test.java">
+      <created>1563131297043</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1563131297052</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456618000" />
+    <option name="totallyTimeSpent" value="457524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
@@ -1582,8 +1582,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/readme">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+        <state relative-caret-position="349">
+          <caret line="26" column="163" selection-start-line="26" selection-start-column="163" selection-end-line="26" selection-end-column="163" />
         </state>
       </provider>
     </entry>

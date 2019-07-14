@@ -24,5 +24,5 @@ In order to visualize the results:
 - Create an artifact for the web application and launch it.
 - View the results.
 
-Note: Scenario execution takes a lot of time, including Scenario 2 for dbpedia, which takes up to 5 days.
-Note 2: There are specialized classes for running WikiData query logs
+Note: using  machine OS Windows 10, 128 GB of RAM, Processor Intel(R) Xeon(R) CPU E5-2673 V4 @ 2.30GHz the execution of the programm took ~ 5 days for DBpdia logs.
+Note 2: There are specialized classes for running WikiData query logs.
