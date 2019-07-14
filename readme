@@ -26,32 +26,3 @@ In order to visualize the results:
 
 Note: Scenario execution takes a lot of time, including Scenario 2 for dbpedia, which takes up to 5 days.
 Note 2: There are specialized classes for running WikiData query logs
-------------------------------------------------------------------------------------------------------------------------
-Bienvenue dans le manuel d’utilisation de CubeQE
-L’application CubeQE est à l’état de prototype, il n’y a donc pas d’installation mais une configuration à faire pour refaire les mêmes expérimentations.
-Afin d’utiliser CubeQE, nous allons vous décrire les installations ainsi que les classes à utiliser.
-
-1.  Installations
-- Installer un IDE Java (IntelliJ (recommandé), Eclipse, Netbeans)
-- Installer JDK 11
-- Installer Scala 2.12.9
-- Installer Apache Tomcat 9.0
-- Télécharger le code source à partir de GitHub
-- Télécharger les logs de requêtes à partir de https://aksw.github.io/LSQ/
-
-2. Classes à utiliser
-- Changer dans la classe "Declartions" (sous src/java/Services/MDfromLogQueries/Declarations) les variables root et rootTdb par le répertoire où vous voulez enregistrer les résultats.
-- Exécuter la classe  “DirectoryCreation” (sous src/java/Services) en changeant le endpoint en fonction de celui voulu (dbPedia, DogFood, etc.) pour créer un répertoire de sauvegarde.
-- Ajouter le log de requêtes dans le dossier "Data Log/logs" sous le répertoire créé.
-- Exécuter la classe “Scenario_logOnly” (sous src/java/Services/Scenarios) pour le scénario 2. (Choisir la classe LogCleaning ou LogCleaningOneFile selon si le log de requêtes contient plusieurs fichiers ou un seul)
-- Exécuter la classe “Scenario_Analytic” (sous src/java/Services/Scenarios) pour le scénario 1. (Exécuter le scénario 1 après le scénario 2 car ce dernier utilise les résultats du nettoyage de log effectué dans le scénario 2.
-- Après exécution du scénario 2, exécuter la classe “Scenario_Enrichment” (sous src/java/Services/Scenarios) pour le scénario 3.
-
-NB : Au niveau des classes de Scénario l'uri et le endpoint sont modifiables selon le log utilisé (variables endpoint et endpointUri)
-
-Afin de visualiser les résultats :
-- Créer un artifact pour l’application web et le lancer.
-- Visualiser les résultats.
-
-Remarque : l’exécution des scénarios prend énormément de temps, notamment le scénario 2 pour dbpedia qui prend jusqu’à 5 jours.
-Remarque 2 : Il existe des classes spécialisées pour exécuter les logs de requêtes de WikiData
