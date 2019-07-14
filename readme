@@ -1,42 +1,57 @@
 Welcome to the CubeQE user manual
-The CubeQE application is in prototype state, so there is no installation but a configuration to do to exploit it.
+The CubeQE application is in prototype state, so there is no installation but a configuration to do to repeat the same experiments.
 In order to use CubeQE, we will describe the installations and the classes to use.
 
-1. Installations
-Install a Java IDE (IntelliJ, Eclipse, Netbeans)
-Install JDK 11
-Install Scala 2.12.9
-Install Apache Tomcat 9.0
-Download source code from GitHub
+1. Facilities
+- Install a Java IDE (IntelliJ (recommended), Eclipse, Netbeans)
+- Install JDK 11
+- Installing Scala 2.12.9
+- Install Apache Tomcat 9.0
+- Download source code from GitHub
+- Download the query logs from https://aksw.github.io/LSQ/
 
 2. Classes to use
-Run the "DirectoryCreation"  class (under src/java/Services) by changing the endpoint to the desired one (dbPedia, DogFood, etc.) to create a backup directory.
-Run the "Scenario_Analytic" class (under src/java/Services/Scenarios) for Scenario 1.
-Run the "Scenario_logOnly" class (under src/java/Services/Scenarios) for Scenario 2.
-After scenario 2 runs, run the "Scenario_Enrichment" class (under src/java/Services/Scenarios)  for scenario 3.
-Create an artifact for the web application and launch it.
-View the results.
+- Change in the "Declarations" class (under src / java / Services / MDfromLogQueries / Declarations) the root and rootTdb variables by the directory where you want to save the results.
+- Execute the "DirectoryCreation" class (under src / java / Services) by changing the endpoint according to the desired endpoint (dbPedia, DogFood, etc.) to create a backup directory.
+- Add the query log in the "Data Log / logs" folder under the created directory.
+- Run the "Scenario_logOnly" class (under src / java / Services / Scenarios) for scenario 2. (Choose the LogCleaning or LogCleaningOneFile class depending on whether the query log contains multiple files or only one)
+- Run the "Scenario_Analytic" class (under src / java / Services / Scenarios) for scenario 1. (Run scenario 1 after scenario 2 because scenario 2 uses the log cleanup results performed in scenario 2.
+- After execution of scenario 2, run the class "Scenario_Enrichment" (under src / java / Services / Scenarios) for scenario 3.
+
+NB: At the level of the classes of Scenario the uri and the endpoint are modifiable according to the log used (variables endpoint and endpointUri)
+
+In order to visualize the results:
+- Create an artifact for the web application and launch it.
+- View the results.
 
 Note: Scenario execution takes a lot of time, including Scenario 2 for dbpedia, which takes up to 5 days.
-
+Note 2: There are specialized classes for running WikiData query logs
 ------------------------------------------------------------------------------------------------------------------------
 Bienvenue dans le manuel d’utilisation de CubeQE
-L’application CubeQE est à l’état de prototype, il n’y a donc pas d’installation mais une configuration à faire pour l’exploiter.
+L’application CubeQE est à l’état de prototype, il n’y a donc pas d’installation mais une configuration à faire pour refaire les mêmes expérimentations.
 Afin d’utiliser CubeQE, nous allons vous décrire les installations ainsi que les classes à utiliser.
 
 1.  Installations
-Installer un IDE Java (IntelliJ, Eclipse, Netbeans)
-Installer JDK 11
-Installer Scala 2.12.9
-Installer Apache Tomcat 9.0
-Télécharger le code source à partir de GitHub
+- Installer un IDE Java (IntelliJ (recommandé), Eclipse, Netbeans)
+- Installer JDK 11
+- Installer Scala 2.12.9
+- Installer Apache Tomcat 9.0
+- Télécharger le code source à partir de GitHub
+- Télécharger les logs de requêtes à partir de https://aksw.github.io/LSQ/
 
 2. Classes à utiliser
-Exécuter la classe  “DirectoryCreation” en changeant le endpoint en fonction de celui voulu (dbPedia, DogFood, etc.) pour créer un répertoire de sauvegarde.
-Exécuter la classe “Scenario_Analytic” pour le scénario 1.
-Exécuter la classe “Scenario_logOnly” pour le scénario 2.
-Après exécution du scénario 2, exécuter la classe “Scenario_Enrichment” pour le scénario 3.
-Créer un artifact pour l’application web et le lancer.
-Visualiser les résultats.
+- Changer dans la classe "Declartions" (sous src/java/Services/MDfromLogQueries/Declarations) les variables root et rootTdb par le répertoire où vous voulez enregistrer les résultats.
+- Exécuter la classe  “DirectoryCreation” (sous src/java/Services) en changeant le endpoint en fonction de celui voulu (dbPedia, DogFood, etc.) pour créer un répertoire de sauvegarde.
+- Ajouter le log de requêtes dans le dossier "Data Log/logs" sous le répertoire créé.
+- Exécuter la classe “Scenario_logOnly” (sous src/java/Services/Scenarios) pour le scénario 2. (Choisir la classe LogCleaning ou LogCleaningOneFile selon si le log de requêtes contient plusieurs fichiers ou un seul)
+- Exécuter la classe “Scenario_Analytic” (sous src/java/Services/Scenarios) pour le scénario 1. (Exécuter le scénario 1 après le scénario 2 car ce dernier utilise les résultats du nettoyage de log effectué dans le scénario 2.
+- Après exécution du scénario 2, exécuter la classe “Scenario_Enrichment” (sous src/java/Services/Scenarios) pour le scénario 3.
+
+NB : Au niveau des classes de Scénario l'uri et le endpoint sont modifiables selon le log utilisé (variables endpoint et endpointUri)
+
+Afin de visualiser les résultats :
+- Créer un artifact pour l’application web et le lancer.
+- Visualiser les résultats.
 
 Remarque : l’exécution des scénarios prend énormément de temps, notamment le scénario 2 pour dbpedia qui prend jusqu’à 5 jours.
+Remarque 2 : Il existe des classes spécialisées pour exécuter les logs de requêtes de WikiData

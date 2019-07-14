@@ -36,7 +36,7 @@ object Scenario_LogOnly extends App{
   val endpoint="dbPedia"
   val endpointUrl="http://linkedgeodata.org/sparql/"
   Declarations.setEndpoint(endpoint)
-/*
+
   /** 1. Nettoyage du log **/
   var t_cleaning: Long = System.currentTimeMillis()
   LogCleaningOneFile.writeFiles(Declarations.paths.get("directoryPath"), Declarations.paths.get("cleanedQueriesFile"))
@@ -94,7 +94,7 @@ object Scenario_LogOnly extends App{
   FileOperation.writeInYAMLFile(Declarations.paths.get("timesFilePath"), "Consolidation", (System.currentTimeMillis() - t_consolidation).toInt)
   FileOperation.writeInYAMLFile(Declarations.paths.get("queriesNumberFilePath"), "Consolidation_nbModelsB4Consolidation", ConsolidationParallel.originalModelsNumber)
   FileOperation.writeInYAMLFile(Declarations.paths.get("queriesNumberFilePath"), "Consolidation_nbModels", ConsolidationParallel.modelsNumber) // after consolidation
-*/
+
 
   /** 8. Alleviation 2  (Small graph removement) **/
   println("***********************Alleviation 2******************")
@@ -114,14 +114,7 @@ object Scenario_LogOnly extends App{
   //writeInTdb(convertToScalaMap(modelsAnnotated), TdbOperation.dataSetAnnotated)
   writeInTdb(convertToScalaMap(modelsAnnotated), Declarations.paths.get("dataSetAnnotated"))
    // FileOperation.writeInYAMLFile(Declarations.paths.get("timesFilePath"), "Annotation", (System.currentTimeMillis() - t_annotation).toInt)
-  /*
-println("***********************Annotation******************")
-var t_annotation: Long = System.currentTimeMillis()
-var theme:String = "university"
-val modelsAlleviate: util.HashMap[String, Model] = TdbOperation.unpersistModelsMap(Declarations.paths.get("dataSetAnnotated"))
-val modelsAnnotated : util.HashMap[String, Model] = MDGraphsAlleviation.getModelsByTheme(modelsAlleviate,theme)
-//writeInTdb(convertToScalaMap(modelsAnnotated), TdbOperation.dataSetAnnotated)
-writeInTdb(convertToScalaMap(modelsAnnotated), Declarations.paths.get("dataSetAnnotated")+ theme)
+
 
   /** 10. Stistique **/
   println("***********************Statistiques******************")
@@ -134,7 +127,7 @@ writeInTdb(convertToScalaMap(modelsAnnotated), Declarations.paths.get("dataSetAn
   //statisticsBySubjectList(subjects)
 
   FileOperation.writeInYAMLFile(Declarations.paths.get("timesFilePath"), "Statistics", (System.currentTimeMillis() - t_statistics).toInt)
-  */
+
   //TODO ecrire dans un fichier les stat concernant nombre de req ..Etc
 
 }

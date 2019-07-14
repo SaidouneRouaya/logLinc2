@@ -17,7 +17,7 @@ object Scenario_Analytic extends App{
   var endpoint = "http://linkedgeodata.org/sparql"
   var t_analytic: Long = System.currentTimeMillis()
   Declarations.setEndpoint("DogFood")
- /* /** 1. Extraction des requêtes analytiques du fichier SyntaxValid */
+  /** 1. Extraction des requêtes analytiques du fichier SyntaxValid */
   var t_extraction: Long = System.currentTimeMillis()
   val queryList = FileOperation.ReadFile(Declarations.paths.get("syntaxValidFile2")).asInstanceOf[util.ArrayList[String]]
   val analyticQueriesList = AnalyticQueries.getAnalyticQueries(queryList)
@@ -54,7 +54,7 @@ object Scenario_Analytic extends App{
   var t_annotation : Long = System.currentTimeMillis()
   AnalyticQueriesScala.AnalyticQueriesAnnotation()
   FileOperation.writeInYAMLFile(Declarations.paths.get("timesFilePath"), "Analytic_annotation", (System.currentTimeMillis() - t_annotation).toInt)
-  */
+
 
   /** 5. Statistics  **/
   var t_statistics: Long = System.currentTimeMillis()
